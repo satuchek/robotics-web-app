@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Anton|Fira+Sans+Condensed" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAE9xI0WM_WW13DbvcLYPHjBaqXnH2-OJE",
+      authDomain: "robotics-scouting-web-app.firebaseapp.com",
+      databaseURL: "https://robotics-scouting-web-app.firebaseio.com",
+      projectId: "robotics-scouting-web-app",
+      storageBucket: "robotics-scouting-web-app.appspot.com",
+      messagingSenderId: "676835182883",
+      appId: "1:676835182883:web:002c4267ecc2a4c2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <div id = "buttonMenu">
+      <button class = "menuButtons" onClick = "addData();" > Add Data </button>
+      <button class = "menuButtons" onClick = "statistics();"> Statistics </button>
+      <button class = "menuButtons" onClick = "coach();"> Coach </button>
+    </div>
+
+
+
+  </body>
+</html>

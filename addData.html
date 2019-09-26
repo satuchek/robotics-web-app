@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" /> 
+</head>
+
+
+<body class = "main">
+
+
+
+
+  <script src = "script.js"></script>
+  <p id = "errorMessage"></p>
+
+
+  <h1>Add Data Page</h1>
+
+  <form id = "teamData" >
+    Team Number:<input name = "teamNumber" type = "number"> </input> <br>
+
+    Match Number: <input name = "matchNumber" type = "number"> </input> <br>
+
+    Location <select name = "location">
+      <option value = "depot"> Depot </option>
+      <option value = "crater"> Crater </option>
+      </select> <br> <br>
+
+    <p class = "heading">Autonomous<p> 
+    Detached from Lander? <input name = "detached" type = "checkbox" ></input> <br>
+    Sampled Mineral? <input name = "sample" type = "checkbox" ></input> <br>
+    Scored team Marker? <input name = "teamMarker" type = "checkbox" ></input> <br>
+    Parked in Crater? <input name = "parked" type = "checkbox" ></input> <br> <br> 
+
+    <p class = "subheading">Additions to Autonomous <p>
+    Scored in the Depot? <input name = "scoredDepot" type = "number"></input> <br>
+    Scored in the Lander? <input name = "scoredLander" type = "number"></input><br><br>
+
+    <p class = "heading"> TeleOp <p>
+    Number scored in Depot <input name = "teleOpDepot" type = "number"></input> <br>
+    Number scored in Lander <input name = "teleOpLander" type = "number"></input> <br> <br> <br>
+
+
+    <p class = "heading"> End Game <p>
+      <select name = "endGame"> 
+      <option value = "hang"> hang </option>
+      <option value = "partialPark"> partial park </option>
+      <option value = "fullPark"> full park </option>
+      <option value = "nothing"> nothing </option>
+      </select><br><br>
+
+    <p class = "heading"> Comments <p/>
+    <textarea form = "teamData" id = "comments"></textarea> <br><br>
+
+
+    <input type = "submit"></input>
+
+
+
+  </form>
+
+      <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAE9xI0WM_WW13DbvcLYPHjBaqXnH2-OJE",
+      authDomain: "robotics-scouting-web-app.firebaseapp.com",
+      databaseURL: "https://robotics-scouting-web-app.firebaseio.com",
+      projectId: "robotics-scouting-web-app",
+      storageBucket: "robotics-scouting-web-app.appspot.com",
+      messagingSenderId: "676835182883",
+      appId: "1:676835182883:web:002c4267ecc2a4c2"
+    };
+    // Initialize Firebase
+    var firebase = firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    </script>
+
+    <script src = "addData.js" ></script>
+
+</body>

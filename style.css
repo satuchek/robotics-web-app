@@ -1,0 +1,47 @@
+.main{
+  background-color:lightgray;
+}
+
+#buttonMenu {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 30%;
+}
+
+.menuButtons {
+  font-family: "Abel";
+  /*Fira Sans Condensed, Anton*/
+  font-size: 200%;
+  width: 100%;
+  padding: 2%; 
+  margin-top: 14%;
+  border-color: black; 
+  border-width: thick;  
+  border-radius: 6%;  
+  background-color: darkgrey;
+  color: black; 
+
+}
+
+.heading {
+  font-weight: bold; 
+  font-size: 130%;
+}
+
+.subheading {
+  font-style: italic;
+}
+/* Emma's attempt */
+#AddDataPage {
+  background-color: lightgrey;
+}
+
+#errorMessage {
+  color:#fc0000;
+  font-weight: bold;
+}
+
+body {
+background-color: red;
+}
