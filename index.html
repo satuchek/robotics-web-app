@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One|Poiret+One|Unica+One" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class = "main">
+    <script src="script.js"></script>
+
+    <div id = "buttonMenu">
+      <button class = "menuButtons" onClick = "addData()">Add Data</button>
+      <button class = "menuButtons" onClick = "statistics()">Statistics</button>
+      <button class = "menuButtons" onclick = "coach()">Coach View</button>
+    </div>
+
+
+
+
+    <script>
+      const firebaseConfig = {
+      apiKey: "AIzaSyDHBYc3XShz2-EQvmcU7w40hMAQaWalUIo",
+      authDomain: "emma-tcsec-wednesday.firebaseapp.com",
+      databaseURL: "https://emma-tcsec-wednesday.firebaseio.com",
+      projectId: "emma-tcsec-wednesday",
+      storageBucket: "emma-tcsec-wednesday.appspot.com",
+      messagingSenderId: "658326000997",
+      appId: "1:658326000997:web:13353e6ed6d5fb99"
+    };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

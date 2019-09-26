@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src = "script.js"></script>
+  <p id = "errorMessage"></p>
+  <h1>Add Data page</h1>
+
+  <form id = "teamData">
+    <input name = "teamNumber" type = "number" placeholder="Team Number"></input><br>
+    <input name = "matchNumber" type = "number" placeholder="Match Number"></input><br>
+    Location <select name = "location">
+      <option value = "depot">Depot</option>
+      <option value = "crater">Crater</option>
+    </select><br><br>
+    <p class = "heading">Autonomous</p>
+    Detached From Lander? <input name = "detached" type = "checkbox"></input><br>
+    Sampled Mineral? <input name = "sampled" type = "checkbox"></input><br>
+    Scored team marker? <input name = "scored" type = "checkbox"></input><br>
+    Parked in Crater? <input name = "parked" type = "checkbox"></input><br><br>
+
+    <p class = "subheading">Autonomous Excellence</p>
+    Scored in depot? <input name = "scored_depot" type = "number"></input><br>
+    Scored in lander? <input name = "scored_lander" type = "number"></input><br><br>
+
+    <p class = "heading">TeleOp</p>
+    Num Scored in Lander: <input name = "teleop_lander" type = "number"></input><br>
+    Num Scored in Depot: <input name = "teleop_depot" type = "number"></input><br><br>
+
+    <p class = "heading">End Game</p>
+    <select name = "endgame">
+      <option value = "hang">Hang</option>
+      <option value = "partial_park">Partial Park</option>
+      <option value = "full_park">Full Park</option>
+      <option value = "nothing">Nothing</option>
+    </select><br><br>
+
+    <p class = "heading">Comments</p>
+    <textarea form = "teamData" id = "comments"></textarea><br><br>
+
+    <input type = "submit"></input>
+  </form>
+
+    <script>
+      const firebaseConfig = {
+      apiKey: "AIzaSyDHBYc3XShz2-EQvmcU7w40hMAQaWalUIo",
+      authDomain: "emma-tcsec-wednesday.firebaseapp.com",
+      databaseURL: "https://emma-tcsec-wednesday.firebaseio.com",
+      projectId: "emma-tcsec-wednesday",
+      storageBucket: "emma-tcsec-wednesday.appspot.com",
+      messagingSenderId: "658326000997",
+      appId: "1:658326000997:web:13353e6ed6d5fb99"
+      };
+      var firebase = firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+    </script>
+    <script src = "addData.js"></script>
+</body>

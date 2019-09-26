@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    
+    <form id = "chartForm">
+      Select Team: <select name = "teamName">
+        <option>Batteries Not Included</option>
+        </select><br>
+      Select Competition Date: <input type = "date" name = "compDate"></input><br>
+      <input type = "submit"></input>
+    </form>
+    <p id = "error"></p>
+    <canvas id="myChart"></canvas>
+
+
+    <script>
+        const firebaseConfig = {
+        apiKey: "AIzaSyDHBYc3XShz2-EQvmcU7w40hMAQaWalUIo",
+        authDomain: "emma-tcsec-wednesday.firebaseapp.com",
+        databaseURL: "https://emma-tcsec-wednesday.firebaseio.com",
+        projectId: "emma-tcsec-wednesday",
+        storageBucket: "emma-tcsec-wednesday.appspot.com",
+        messagingSenderId: "658326000997",
+        appId: "1:658326000997:web:13353e6ed6d5fb99"
+        };
+        var firebase = firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+      </script>
+      <script src = "statistics.js"></script>
+  </body>
+  
+
+</html>
